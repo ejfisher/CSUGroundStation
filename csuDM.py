@@ -19,9 +19,23 @@ def write(filename, dArray):
 	f.write(fstring)
 	f.close()
 
-def format(bigData):
-	
-
-
 def deconstruct(dString):
+	itervals = [3, 5, 2, 3, 3, 3, 3]
+	padVals = [2, 7, 2, 5, 5, 6, 6]
+	dArray = []
+	head = 0
+	i = 0
+	for val in itervals:
+		innerArray = [0]*val
+		index = 0
+		for j in range(val):
+			tail = head + padVals[i]
+			innerArray[index] = dString[head:tail]
+			head = tail
+			index += 1
+		dArray.append(innerArray)
+		i += 1
+	return dArray
+
+	
 
