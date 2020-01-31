@@ -20,8 +20,8 @@ def write(filename, dArray):
 	f.close()
 
 def deconstruct(dString):
-	itervals = [3, 5, 2, 3, 3, 3, 3]
-	padVals = [2, 7, 2, 5, 5, 6, 6]
+	itervals = [3, 6, 2, 3, 3, 3, 3]
+	padVals = [2, 8, 2, 6, 6, 7, 7]
 	dArray = []
 	head = 0
 	i = 0

@@ -22,8 +22,10 @@ def receive():
 	rString = ""
 	packet = rfm9x.receive()
 	if packet is None:
+		print("we got nothing")
 		return False, rString, None
 	else:
 		print('received raw bytes: {0}'.format(packet))
-		rString = str(packet, 'ascii')
+		rString = str(packet, 'utf-8')
+		print("Formatted rString: " + rString)
 		return True, rString, rfm9x.rssi
